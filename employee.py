@@ -1,3 +1,5 @@
+import sys
+
 def calculate_salary(basic):
     hra = 0.20 * basic
     da = 0.50 * basic
@@ -7,10 +9,10 @@ def calculate_salary(basic):
 
 
 def main():
-    name = input("Enter Employee Name: ")
-    emp_id = input("Enter Employee ID: ")
-    designation = input("Enter Designation: ")
-    basic_salary = float(input("Enter Basic Salary: "))
+    name = sys.argv[1]
+    emp_id = sys.argv[2]
+    designation = sys.argv[3]
+    basic_salary = float(sys.argv[4])
 
     hra, da, pf, net = calculate_salary(basic_salary)
 
